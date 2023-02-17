@@ -1,0 +1,11 @@
+--- main/systemMenu.js
++++ main/systemMenu.js
+@@ -531,7 +531,7 @@ function setupSystemMenu() {
+         template.push((0, debugMenu_1.getDebugMenu)());
+     }
+     const menu = electron_1.Menu.buildFromTemplate(escapeAllAmpersands(template));
+-    electron_1.Menu.setApplicationMenu(menu);
++    //electron_1.Menu.setApplicationMenu(menu);
+     if (isElectronMac) {
+         const dockMenu = electron_1.Menu.buildFromTemplate([
+             {

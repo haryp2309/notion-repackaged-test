@@ -4,7 +4,7 @@ set -e
 source `dirname $0`/_utils.sh
 workdir ${WORKSPACE_BUILD_DIR}
 
-check-cmd 7z jq convert sponge
+check-cmd 7z jq convert sponge patch
 check-env NOTION_VERSION NOTION_REPACKAGED_REVISION
 
 if [ -d "${NOTION_EXTRACTED_EXE_NAME}" ]; then
@@ -55,6 +55,8 @@ sed -i 's|error.message.indexOf("/opt/notion-app/app.asar") !== -1|process.platf
 
 # fix for issue #46 of notion-repackaged
 patch -p0 --binary < "${WORKSPACE_DIR}/patches/no-sandbox-flag.patch"
+patch -p0 --binary < "${WORKSPACE_DIR}/patches/no-menu.patch"
+patch -p0 --binary < "${WORKSPACE_DIR}/patches/react-intl-dependency-fix.patch"
 
 find . -type f -name "*.js.map" -exec rm {} +
 
