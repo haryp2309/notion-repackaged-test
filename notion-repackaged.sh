@@ -10,7 +10,7 @@ export NOTION_VERSION=2.0.40
 export NOTION_REPACKAGED_REVISION=1
 
 # The md5sum hash of the downloaded .exe for the installer
-export NOTION_DOWNLOAD_HASH=31bb8b9d547cb5385b9f04017214a206
+export NOTION_DOWNLOAD_HASH=69c548bc93700174f9e5cadef2ba26db
 
 # The commit of notion-enhancer/desktop to target
 export NOTION_ENHANCER_DESKTOP_COMMIT=832db26d2e6a247d9e76847b2de50435fa7c40d2
